@@ -1,0 +1,33 @@
+@import "vars.scss";
+@import "null.scss";
+
+#root {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.widget {
+  border: 1px solid #000;
+  border-radius: 0.5em;
+  margin-top: 5em;
+  padding: 1em;
+  position: relative;
+  &__content {
+    margin: 0 0 1.5em 0;
+    height: 200px;
+    overflow: auto;
+    transition: all 0.5s ease 0s;
+    overflow-y: hidden;
+    &.hidden {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.25s ease 0s;
+    }
+  }
+  &__btn {
+    background-color: inherit;
+    border-bottom: 1px dashed #000;
+    position: absolute;
+    bottom: 19px;
+  }
+}
